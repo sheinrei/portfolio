@@ -1,0 +1,33 @@
+:root{
+    --text-color : #dbdbdb;
+    --main-bg:#202020;
+    --soft-bg:#646464;
+    --color-content : #8D8D8D;
+    --color-border : #BBBBBB;
+}
+
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.logo{
+    width: 2.3em;height: 1.7em;
+    transform: translateY(25%);    
+    padding-right:7px;
+}
+
+a{
+    color:rgb(255, 228, 73);
+    text-decoration: none;
+    font-weight: bold;
+}
