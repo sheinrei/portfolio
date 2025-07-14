@@ -4,6 +4,7 @@
     --soft-bg:#646464;
     --color-content : #8D8D8D;
     --color-border : #BBBBBB;
+    --color-gold : rgb(255, 228, 73);
 }
 
 
@@ -27,7 +28,16 @@ body {
 }
 
 a{
-    color:rgb(255, 228, 73);
+    color:var(--color-gold);
     text-decoration: none;
     font-weight: bold;
+}
+
+h3{
+    text-decoration: underline;
+}
+
+.strong{
+    font-weight: bolder;
+    color:rgb(218, 93, 93);
 }

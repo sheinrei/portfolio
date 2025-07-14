@@ -1,0 +1,36 @@
+.modale{
+    width: 200px;
+    height: 180px;
+    border:1px solid red;
+    background-color:var(--color-content);
+
+    position:absolute;
+    left:50%;
+    transform: translate(-50%, -250px);
+}
+
+
+.top-modale{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:var(--main-bg)
+}
+
+.top_modale_left{
+    width: 100%;
+    text-align: center;
+}
+.close_modale{
+    background-color: red;
+    color:black;
+    padding:4px 5px;
+}
+
+.close_modale:hover{
+    cursor: pointer;
+}
+
+.content_modale{
+    padding:0 15px;
+}

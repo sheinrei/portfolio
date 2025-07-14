@@ -6,13 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="head&foot.css">
-    <link rel="stylesheet" href="content.css">
-    <link rel="stylesheet" href="var&generic.css">
+    <link rel="stylesheet" href="css/head&foot.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/var&generic.css">
+    <link rel="stylesheet" href="css/modale.css">
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <!-- jquerry-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!--mes scripts-->
+    <script src="display_comment.js"></script>
+    <script src="event.js"></script>
+
+
+
+    <!-- 
+    https://www.jeremiebarriere.fr/ -->
 </head>
 
 
@@ -30,77 +43,106 @@
         </div>
 
         <div class="navBarre">
-            <p><i class="fa-solid fa-circle-user"></i> Presentation</p>
-            <p><i class="fa-solid fa-file"></i> Exprerience</p>
-            <p><i class="fa-brands fa-product-hunt"></i> Projets</p>
+            <a href="#section-1"><i class="fa-solid fa-circle-user"></i> Presentation</a>
+            <a href="#section-2"><i class="fa-brands fa-product-hunt"></i> Projets</a>
+            <a href="#section-3"><i class="fa-solid fa-file"></i> Commentaire</a>
         </div>
     </div>
 
 
     <div class="content">
         <!--Section du haut, presentation rapide + link-->
-        <div class="section-1">
+        <div class="section-1" id="section-1">
             <div class="section-1a">
 
                 <div class="frame_me">
                     <img class="photo" src="img/photo.jpg" alt="Une photo de moi">
-                    <p>Laurent Beaute</p>
+                    <p style="border-bottom:1px solid var(--color-border);padding-bottom:5px">Laurent Beaute</p>
                     <p>Développeur Full Stack</p>
-                    <p>31 ans · Montdurausse, 81630</p>
-                    <p>Actuellement en formation avec Formapedia</p>
-
-                    <p>Mes reseaux</p>
+                    <p>31 ans - Montdurausse(81)</p>
+                    <p>En formation avec Formapedia</p>
+                    <a href="https://sheinrei.github.io/BeauteLaurentCV/" target="_blank">Mon cv</a>
+                    <br>
+                    <p style="border-bottom:1px solid var(--color-border);padding-bottom:5px">Langues</p>
+                    <p>Français : Natif</p>
+                    <p>Anglais : Intermédiaire</p>
+                    <br>
+                    <p style="border-bottom:1px solid var(--color-border);padding-bottom:5px">Mes reseaux</p>
                     <a href="https://www.linkedin.com/in/laurent-beaute-534073246/" target="_blank">Linkedin</a>
                     <a href="https://github.com/sheinrei" target="_blank">Github</a>
-                    <a href="https://sheinrei.github.io/BeauteLaurentCV/" target="_blank">Mon cv</a>
                 </div>
 
             </div>
 
             <div class="section-1b">
 
-                <div class="frame_presentation">
-
-                    <h1>BIENVENUE SUR MON PORTFOLIO</h1>
-                    <p>Je suis Laurent, étudiant en developpement web full stack, curieux de nature je me suis toujours
+                <h1>BIENVENUE SUR <span style="color:var(--color-gold)">MON PORTFOLIO</span></h1>
+                <div class="presentation_text">
+                    <p>Hello ! Je suis Laurent, étudiant en developpement web full stack, <span class="strong">curieux</span> de nature je me suis
+                        toujours
                         passionné par l'informatique et suite à la perte de mon precedent emplois j'ai fais le grand
                         saut dans le developpement web. <br>
-                        Aujourd’hui, je m’épanouis en créant des applications utiles, modernes et bien pensées,
+                        Aujourd’hui, je m’<span class="strong">épanouis</span> en créant des applications utiles, modernes et bien pensées,
                         aussi bien côté front-end que back-end. Ce portfolio est le reflet de mon apprentissage,
-                        de ma détermination,
-                        et de mon envie constante de progresser dans un domaine qui me stimule chaque jour un peu plus.
+                        de ma <span class="strong">détermination</span>,
+                        et de mon envie constante de <span class="strong">progresser</span> dans un domaine qui me stimule chaque jour un peu plus.
                     </p>
+                </div>
 
-                    <div class="tools">
-                        <h2>Mes outils</h2>
-                        <div class="list_tools">
+                <div class="tools">
+                    <h2>Mes Langages</h2>
+                    <div class="list_tools">
 
-                            <div class="element-tool">
-                                <img src="img/logoHtmlCss.png" alt="logo de html et css" class="logo">
-                                <p>HTML/CSS</p>
-                            </div>
-
-                            <div class="element-tool">
-                                <img src="img/logoJs.png" alt="logo de javascript" class="logo">
-                                <p>JavaScript</p>
-                            </div>
-
-                            <div class="element-tool">
-                                <img src="img/logoPhp.png" alt="logo de php" class="logo">
-                                <p>PHP</p>
-                            </div>
-
-                            <div class="element-tool">
-                                <img src="img/logoSymphony.png" alt="logo de symfony" class="logo">
-                                <p>Symfony</p>
-                            </div>
-
-                            <div class="element-tool">
-                                <img src="img/logoSql.png" alt="logo de mysql" class="logo">
-                                <p>MySql</p>
-                            </div>
-
+                        <div class="element-tool">
+                            <img src="img/logoHtmlCss.png" alt="logo de html et css" class="logo">
+                            <p>HTML/CSS</p>
                         </div>
+
+                        <div class="element-tool">
+                            <img src="img/logoJs.png" alt="logo de javascript" class="logo">
+                            <p>JavaScript</p>
+                        </div>
+
+                        <div class="element-tool">
+                            <img src="img/logoPhp.png" alt="logo de php" class="logo">
+                            <p>PHP</p>
+                        </div>
+
+                        <div class="element-tool">
+                            <img src="img/logoSymphony.png" alt="logo de symfony" class="logo">
+                            <p>Symfony</p>
+                        </div>
+
+                        <div class="element-tool">
+                            <img src="img/logoSql.png" alt="logo de mysql" class="logo">
+                            <p>MySql</p>
+                        </div>
+
+                    </div>
+
+                    <h2>Mes outils</h2>
+                    <div class="list_tools">
+
+                        <div class="element-tool">
+                            <img src="img/looping.png" alt="logo de html et css" class="logo">
+                            <p>Looping</p>
+                        </div>
+
+                        <div class="element-tool">
+                            <img src="img/PhpMyAdmin.png" alt="logo de html et css" class="logo">
+                            <p>phpMyAdmin</p>
+                        </div>
+
+                        <div class="element-tool">
+                            <img src="img/logoFigma.png" alt="logo de html et css" class="logo">
+                            <p>Figma</p>
+                        </div>
+
+                        <div class="element-tool">
+                            <img src="img/logoGithub.png" alt="logo de html et css" class="logo">
+                            <p>Github</p>
+                        </div>
+
                     </div>
                 </div>
 
@@ -108,46 +150,150 @@
         </div>
 
 
-
-
-        <div class="section-2">
+        <div class="section-2" id="section-2">
             <h2>Mes Projets</h2>
 
             <div class="frame_projet_detail">
-                <p>Station Meteo v1</p>
-                <p>Application de station meteo, appel API </p>
-                <p>Techno : HTML/CSS/JavaScript</p>
+                <div class="a">
+                    <h3>Station Meteo v1</h3>
+                    <p>Application de station meteo, appel API </p>
+                    <p>Techno : HTML/CSS/JavaScript</p>
+                </div>
+                <div class="link">
+                    <div class="frame_link">YOLOOO</div>
+                    <div class="frame_link">Visualiser</div>
+                    <div class="frame_link">Aller sur le site</div>
+                </div>
             </div>
 
             <br>
 
 
             <div class="frame_projet_detail">
-                <p>Station Meteo v2</p>
-                <p>Application de station meteo, appel API, animation, donnée enregistré dans LocalStorage </p>
-                <p>Techno : HTML/CSS/JavaScript</p>
+                <div class="a">
+                    <h3>Station Meteo v2</h3>
+                    <p>Application de station meteo, appel API, animation, donnée enregistré dans LocalStorage </p>
+                    <p>Techno : HTML/CSS/JavaScript</p>
+                </div>
+                <div class="link">
+                    <div class="frame_link">YOLOOO</div>
+                </div>
             </div>
 
             <br>
 
             <div class="frame_projet_detail">
-                <p>DiscoShein</p>
-                <p>Application recherche et detail de musique, premier pas dans PHP gestion de CRUD et preparation
-                    de
-                    base
-                    de donnée</p>
-                <p>Techno : HTML/CSS/JavaScript/PHP/MySql</p>
+                <div class="a">
+                    <h3>DiscoShein</h3>
+                    <p>Application recherche et detail de musique, premier pas dans PHP gestion de CRUD et preparation
+                        base de donnée</p>
+                    <p>Techno : HTML/CSS/JavaScript/PHP/MySql</p>
+                </div>
+                <div class="link">
+                    <div class="frame_link">YOLOOO</div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="frame_projet_detail">
+                <div class="a">
+                    <h3>BestFlix</h3>
+                    <p>
+                        Formulaire confirmation d'achat d'abonnement, controle de formulaire JS, transaction bancaire
+                        Stripe
+                    </p>
+                    <p>Techno : HTML/CSS/JavaScript/PHP/Stripe</p>
+                </div>
+                <div class="link">
+                    <div class="frame_link">YOLOOO</div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="frame_projet_detail">
+                <div class="a">
+                    <h3>Summoners War Management</h3>
+                    <p>
+                        Application de jeu mobile. Management d'équipement du jeu, gestion de ressource
+                    </p>
+                    <p>Techno : HTML/CSS/JavaScript/PHP/Symfony/MySql</p>
+                </div>
+                <div class="link">
+                    <div class="frame_link">YOLOOO</div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="frame_projet_detail">
+                <div class="a">
+                    <h3>Copie Layout de page web</h3>
+                    <p>
+                        Entrainement à la reproduction de maquette
+                        <a href="https://sheinrei.github.io/template-caverta/" target="_blank">Template Caverta</a>
+                        <a href="https://sheinrei.github.io/bar-coktail/" target="_blank">Template Bar Coktail</a>
+                    </p>
+                    <p>Techno : HTML/CSS</p>
+                </div>
+                <div class="link">
+                    <div class="frame_link">Visualiser</div>
+                    <div class="frame_link">Aller sur le site</div>
+                </div>
+            </div>
+
+
+        </div><!-- fin du content-->
+
+
+        <div class="section-3" id="section-3">
+            <div class="add_comment">
+                <h2>Commentaire</h2>
+                <form action="traitement_comment.php" method="post">
+                    <fieldset>
+                        <legend>Laisser un <span style="color:var(--color-gold)">commentaire</span></legend>
+
+
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" >
+
+                        <label for="prenom">Prenom</label>
+                        <input type="text" name="prenom">
+
+                        <label for="email">Email</label>
+                        <input type="email" name="email">
+                        <br><br>
+
+                        <label for="note">Noter</label>
+                        <br>
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <br>
+                        <label for="commentaire">Commentaire : </label><br>
+                        <textarea type="text-aria" name="commentaire" rows="5" cols="35" style="resize: none"></textarea>
+
+                        <input type="submit">
+
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="display_comment">
+                <div id="input_comment">
+                    Commentaires :
+                </div>
             </div>
         </div>
 
 
 
 
+
     </div>
-
-
-
-
 
     <div class="footer">
         <p>Copyright © 2025 - Laurent BEAUTE</p>
