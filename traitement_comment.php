@@ -4,6 +4,7 @@ $nom = $_POST["nom"];
 $prenom = $_POST["prenom"];
 $email = $_POST["email"];
 $commentaire = $_POST["commentaire"];
+$stars = $_POST["stars"];
 $valid = false;
 
 
@@ -14,14 +15,14 @@ $pass = '';
 $pdo = new \PDO($dsn, $user, $pass);
 
 
-addComment($nom, $prenom, $email, $commentaire, $valid, $pdo);
+addComment($nom, $prenom, $email, $commentaire, $valid, $stars,$pdo);
 
 
 // Ajouter un commentaire dans db
-function addComment($nom, $prenom, $email, $commentaire, $valid, $pdo)
+function addComment($nom, $prenom, $email, $commentaire, $valid, $stars, $pdo)
 {
-    $sql = "INSERT INTO commentaire (nom,prenom,email,date,commentaire,validation) 
-    VALUES (:nom, :prenom, :email, NOW(), :commentaire, :valid)";
+    $sql = "INSERT INTO commentaire (nom,prenom,email,date,commentaire,validation,notation) 
+    VALUES (:nom, :prenom, :email, NOW(), :commentaire, :valid, :stars)";
 
     $params = [
         'nom' => $nom,
@@ -29,6 +30,7 @@ function addComment($nom, $prenom, $email, $commentaire, $valid, $pdo)
         'email' => $email,
         'commentaire' => $commentaire,
         'valid' => $valid,
+        'stars' =>$stars,
 
     ];
 
@@ -36,4 +38,3 @@ function addComment($nom, $prenom, $email, $commentaire, $valid, $pdo)
     $stmt->execute($params);
 }
 
-header("Location:index.html");

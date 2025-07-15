@@ -29,28 +29,23 @@
 </head>
 
 
-
-
-
-
-
 <body>
 
-    <div class="header">
+    <div class="header" id="header">
         <div class="name">
             <p class="initial">LB</p>
             <h2 class="name">Laurent Beaute</h2>
         </div>
 
         <div class="navBarre">
-            <a href="#section-1"><i class="fa-solid fa-circle-user"></i> Presentation</a>
+            <a href="#content"><i class="fa-solid fa-circle-user"></i> Presentation</a>
             <a href="#section-2"><i class="fa-brands fa-product-hunt"></i> Projets</a>
             <a href="#section-3"><i class="fa-solid fa-file"></i> Commentaire</a>
         </div>
     </div>
 
 
-    <div class="content">
+    <div class="content" id="content">
         <!--Section du haut, presentation rapide + link-->
         <div class="section-1" id="section-1">
             <div class="section-1a">
@@ -78,14 +73,17 @@
 
                 <h1>BIENVENUE SUR <span style="color:var(--color-gold)">MON PORTFOLIO</span></h1>
                 <div class="presentation_text">
-                    <p>Hello ! Je suis Laurent, étudiant en developpement web full stack, <span class="strong">curieux</span> de nature je me suis
+                    <p>Hello ! Je suis Laurent, étudiant en developpement web full stack, <span
+                            class="strong">curieux</span> de nature je me suis
                         toujours
                         passionné par l'informatique et suite à la perte de mon precedent emplois j'ai fais le grand
                         saut dans le developpement web. <br>
-                        Aujourd’hui, je m’<span class="strong">épanouis</span> en créant des applications utiles, modernes et bien pensées,
+                        Aujourd’hui, je m’<span class="strong">épanouis</span> en créant des applications utiles,
+                        modernes et bien pensées,
                         aussi bien côté front-end que back-end. Ce portfolio est le reflet de mon apprentissage,
                         de ma <span class="strong">détermination</span>,
-                        et de mon envie constante de <span class="strong">progresser</span> dans un domaine qui me stimule chaque jour un peu plus.
+                        et de mon envie constante de <span class="strong">progresser</span> dans un domaine qui me
+                        stimule chaque jour un peu plus.
                     </p>
                 </div>
 
@@ -256,26 +254,46 @@
 
 
                         <label for="nom">Nom</label>
-                        <input type="text" name="nom" >
+                        <input type="text" name="nom" id="nom" required>
 
                         <label for="prenom">Prenom</label>
-                        <input type="text" name="prenom">
+                        <input type="text" name="prenom" id="prenom" required>
 
                         <label for="email">Email</label>
-                        <input type="email" name="email">
+                        <input type="email" name="email" id="email" required>
                         <br><br>
 
-                        <label for="note">Noter</label>
-                        <br>
-                        <input type="checkbox">
-                        <input type="checkbox">
-                        <input type="checkbox">
-                        <input type="checkbox">
-                        <input type="checkbox">
+
+
+
+
+                        <div class="rating">
+
+                            <input type="radio" id="star5" name="rating" value="5" />
+                            <label for="star5" title="5 étoiles">★</label>
+
+                            <input type="radio" id="star4" name="rating" value="4" />
+                            <label for="star4" title="4 étoiles">★</label>
+
+                            <input type="radio" id="star3" name="rating" value="3" />
+                            <label for="star3" title="3 étoiles">★</label>
+
+                            <input type="radio" id="star2" name="rating" value="2" />
+                            <label for="star2" title="2 étoiles">★</label>
+
+                            <input type="radio" id="star1" name="rating" value="1" />
+                            <label for="star1" title="1 étoile">★</label>
+                        </div>
+
+
+
+
+
                         <br>
                         <label for="commentaire">Commentaire : </label><br>
-                        <textarea type="text-aria" name="commentaire" rows="5" cols="35" style="resize: none"></textarea>
-
+                        <textarea type="text-aria" name="commentaire" rows="5" cols="35" style="resize: none"
+                            id="commentaire" required></textarea>
+                        <br>
                         <input type="submit">
 
                     </fieldset>
@@ -284,7 +302,7 @@
 
             <div class="display_comment">
                 <div id="input_comment">
-                    Commentaires :
+                    <span style="padding-bottom:10px">Commentaires :</span>
                 </div>
             </div>
         </div>

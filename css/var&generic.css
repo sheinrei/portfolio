@@ -41,3 +41,36 @@ h3{
     font-weight: bolder;
     color:rgb(218, 93, 93);
 }
+
+/* checkbox étoile */
+.rating {
+  direction: rtl; /* Pour gérer la sélection de droite à gauche */
+  unicode-bidi: bidi-override;
+  font-size: 2.5rem;
+  user-select: none;
+
+  display:flex;
+  justify-content: end;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+/* Style des étoiles (labels) */
+.rating label {
+  color: lightgray;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Les étoiles cochées */
+.rating input[type="radio"]:checked ~ label {
+  color: gold;
+}
+
+/* Hover : colore les étoiles survolées et celles avant */
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+}

@@ -7,7 +7,7 @@ $pdo = new \PDO($dsn, $user, $pass);
 
 function getComment($pdo)
 {
-    $sql = "select nom,prenom,date,commentaire 
+    $sql = "select nom,prenom,date,commentaire,notation 
     from commentaire
     where validation = '1' ";
     $stmt = $pdo->prepare($sql);
