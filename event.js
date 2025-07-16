@@ -115,4 +115,12 @@ $(function () {
     });
     // fin des event pour deplkacer la modale
 
+
+    //date et heure dans le header
+
+    setInterval(() => {
+        const date = new Date();
+        const current_time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+        $(".right-header p").text(current_time);
+    }, 1000)
 })

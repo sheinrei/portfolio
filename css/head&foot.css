@@ -1,19 +1,26 @@
 /* head */
 
-.header{
-    background-color: var(--soft-bg);
-}
+
 
 .header{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     position: sticky;
     top: 0px;
     padding-bottom: 10px;
-
+    
+    background-color: var(--soft-bg);
     z-index: 5;
 }
 
+.left-header{
+    display: flex;
+    flex-direction: column;    
+}
+
+.right-header{
+    padding:10px 20px;
+}
 .name{
     display: flex;
     gap:10px

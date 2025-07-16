@@ -14,6 +14,10 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <!-- google font-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Jura:wght@300..700&family=Lisu+Bosa:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Markazi+Text:wght@400..700&family=My+Soul&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <!-- jquerry-->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -21,26 +25,31 @@
     <!--mes scripts-->
     <script src="display_comment.js"></script>
     <script src="event.js"></script>
+    <script src="modaleProject.js"></script>
 
 
 
-    <!-- 
-    https://www.jeremiebarriere.fr/ -->
 </head>
 
 
 <body>
 
     <div class="header" id="header">
-        <div class="name">
-            <p class="initial">LB</p>
-            <h2 class="name">Laurent Beaute</h2>
+        <div class="left-header">
+            <div class="name">
+                <p class="initial">LB</p>
+                <h2 class="name">Laurent Beaute</h2>
+            </div>
+
+            <div class="navBarre">
+                <a href="#content"><i class="fa-solid fa-circle-user"></i> Presentation</a>
+                <a href="#section-2"><i class="fa-brands fa-product-hunt"></i> Projets</a>
+                <a href="#section-3"><i class="fa-solid fa-file"></i> Commentaire</a>
+            </div>
         </div>
 
-        <div class="navBarre">
-            <a href="#content"><i class="fa-solid fa-circle-user"></i> Presentation</a>
-            <a href="#section-2"><i class="fa-brands fa-product-hunt"></i> Projets</a>
-            <a href="#section-3"><i class="fa-solid fa-file"></i> Commentaire</a>
+        <div class="right-header">
+            <p>date et heure</p>
         </div>
     </div>
 
@@ -150,17 +159,15 @@
 
         <div class="section-2" id="section-2">
             <h2>Mes Projets</h2>
-
+            
             <div class="frame_projet_detail">
                 <div class="a">
-                    <h3>Station Meteo v1</h3>
+                    <a href="https://sheinrei.github.io/station-meteo/" target="_blank">Station Meteo v1</a>
                     <p>Application de station meteo, appel API </p>
                     <p>Techno : HTML/CSS/JavaScript</p>
                 </div>
-                <div class="link">
-                    <div class="frame_link">YOLOOO</div>
-                    <div class="frame_link">Visualiser</div>
-                    <div class="frame_link">Aller sur le site</div>
+                <div>
+                    <div class="modale_project">C</div>
                 </div>
             </div>
 
@@ -169,12 +176,13 @@
 
             <div class="frame_projet_detail">
                 <div class="a">
-                    <h3>Station Meteo v2</h3>
-                    <p>Application de station meteo, appel API, animation, donnée enregistré dans LocalStorage </p>
+                    <a href="https://sheinrei.github.io/formation-meteo/" target="_blank">Station Meteo v2</a>
+                    <p>Application de station meteo, appel API, animation, donnée enregistré dans LocalStorage 
+                    </p>
                     <p>Techno : HTML/CSS/JavaScript</p>
                 </div>
-                <div class="link">
-                    <div class="frame_link">YOLOOO</div>
+                <div>
+                    <div class="modale_project">X</div>
                 </div>
             </div>
 
@@ -187,8 +195,8 @@
                         base de donnée</p>
                     <p>Techno : HTML/CSS/JavaScript/PHP/MySql</p>
                 </div>
-                <div class="link">
-                    <div class="frame_link">YOLOOO</div>
+                <div>
+                    <div class="modale_project">Open Modale porject</div>
                 </div>
             </div>
 
@@ -203,8 +211,8 @@
                     </p>
                     <p>Techno : HTML/CSS/JavaScript/PHP/Stripe</p>
                 </div>
-                <div class="link">
-                    <div class="frame_link">YOLOOO</div>
+                <div>
+                    <div class="modale_project">Open Modale porject</div>
                 </div>
             </div>
 
@@ -218,8 +226,8 @@
                     </p>
                     <p>Techno : HTML/CSS/JavaScript/PHP/Symfony/MySql</p>
                 </div>
-                <div class="link">
-                    <div class="frame_link">YOLOOO</div>
+                <div>
+                    <div class="modale_project">Open Modale porject</div>
                 </div>
             </div>
 
@@ -231,13 +239,13 @@
                     <p>
                         Entrainement à la reproduction de maquette
                         <a href="https://sheinrei.github.io/template-caverta/" target="_blank">Template Caverta</a>
+                        <span>,</span>
                         <a href="https://sheinrei.github.io/bar-coktail/" target="_blank">Template Bar Coktail</a>
                     </p>
                     <p>Techno : HTML/CSS</p>
                 </div>
-                <div class="link">
-                    <div class="frame_link">Visualiser</div>
-                    <div class="frame_link">Aller sur le site</div>
+                <div>
+                    <div class="modale_project">Open Modale porject</div>
                 </div>
             </div>
 
