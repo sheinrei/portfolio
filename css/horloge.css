@@ -1,0 +1,112 @@
+.clock {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    border: 1px solid rgb(76, 76, 76);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: beige;
+
+}
+
+/* aiguille seconde */
+.second_needle {
+
+    border-radius: 50%;
+    margin: 0;
+    height: 55px;
+    width: 2px;
+
+    background: rgb(60, 60, 60);
+
+
+    transform-origin: bottom center;
+    position: relative;
+    top: -21px;
+    left: 7px;
+
+}
+
+/* aiguille des minutes */
+.hour_needle {
+    border-radius: 50%;
+    margin: 0;
+    height: 45px;
+    width: 2px;
+    border-radius: 100%;
+    background: rgb(237, 235, 235);
+    border: 2px solid black;
+
+    transform-origin: bottom center;
+    position: relative;
+    top:-18px;
+    left: -3px;
+}
+
+.minute_needle {
+    border-radius: 50%;
+    margin: 0;
+    height: 35px;
+    width: 2px;
+    border-radius: 100%;
+    background: rgb(237, 235, 235);
+    border: 2px solid black;
+
+    transform-origin: bottom center;
+    position: relative;
+    top: -13px;
+    right: -3px;
+}
+
+/* Hours numbers */
+
+
+
+.III,
+.VI,
+.IX,
+.XII {
+    font-size: large;
+    font-weight: bolder;
+    position: relative;
+    margin: 0;
+    height: 0;
+    width: 0;
+    color:black;
+    font-size:0.5em
+}
+
+.VI {
+    top: 50px;
+    right: 10px
+}
+
+.XII {
+    bottom: 60px;
+    right: 10px
+}
+
+.III {
+    left: 43px;
+}
+
+.IX {
+    right: 67px;
+}
+
+
+
+.new_needle {
+    position: absolute;
+    top: 200px;
+    right: 300px;
+    height: 100px;
+    width: 6px;
+    border-radius: 100%;
+    background: rgb(237, 235, 235);
+    border: 4px solid black;
+
+}

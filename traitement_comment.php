@@ -1,5 +1,7 @@
 <?php
 
+$config = require 'config.php';
+
 $nom = $_POST["nom"];
 $prenom = $_POST["prenom"];
 $email = $_POST["email"];
@@ -9,9 +11,9 @@ $valid = false;
 
 
 
-$dsn = 'mysql:host=localhost;dbname=portfolio';
-$user = 'root';
-$pass = '';
+$dsn = $config["dsn"];
+$user = $config['user'];
+$pass = $config["password"];
 $pdo = new \PDO($dsn, $user, $pass);
 
 

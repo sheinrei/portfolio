@@ -10,14 +10,16 @@
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/var&generic.css">
     <link rel="stylesheet" href="css/modale.css">
+    <link rel="stylesheet" href="css/horloge.css">
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
     <!-- google font-->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Jura:wght@300..700&family=Lisu+Bosa:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Markazi+Text:wght@400..700&family=My+Soul&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Jura:wght@300..700&family=Lisu+Bosa:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Markazi+Text:wght@400..700&family=My+Soul&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
     <!-- jquerry-->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -26,6 +28,7 @@
     <script src="display_comment.js"></script>
     <script src="event.js"></script>
     <script src="modaleProject.js"></script>
+    <script src="horloge.js"></script>
 
 
 
@@ -36,7 +39,7 @@
 
     <div class="header" id="header">
         <div class="left-header">
-            <div class="name">
+            <div class="name" >
                 <p class="initial">LB</p>
                 <h2 class="name">Laurent Beaute</h2>
             </div>
@@ -48,9 +51,18 @@
             </div>
         </div>
 
-        <div class="right-header">
-            <p>date et heure</p>
+
+        <div class="clock">
+            <p class="second_needle" id="secondes_needle"></p>
+            <p class="minute_needle" id="minutes_needle"></p>
+            <p class="hour_needle" id="hours_needle"></p>
+
+            <p class="VI">VI</p>
+            <p class="XII">XII</p>
+            <p class="III">III</p>
+            <p class="IX">IX</p>
         </div>
+
     </div>
 
 
@@ -159,7 +171,7 @@
 
         <div class="section-2" id="section-2">
             <h2>Mes Projets</h2>
-            
+
             <div class="frame_projet_detail">
                 <div class="a">
                     <a href="https://sheinrei.github.io/station-meteo/" target="_blank">Station Meteo v1</a>
@@ -177,7 +189,7 @@
             <div class="frame_projet_detail">
                 <div class="a">
                     <a href="https://sheinrei.github.io/formation-meteo/" target="_blank">Station Meteo v2</a>
-                    <p>Application de station meteo, appel API, animation, donnée enregistré dans LocalStorage 
+                    <p>Application de station meteo, appel API, animation, donnée enregistré dans LocalStorage
                     </p>
                     <p>Techno : HTML/CSS/JavaScript</p>
                 </div>
