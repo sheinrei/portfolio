@@ -1,6 +1,8 @@
 <?php
 
-$config = require 'config.php';
+$config = require __DIR__ . '/config.php';
+
+require ("mailer.php");
 
 $nom = $_POST["nom"];
 $prenom = $_POST["prenom"];
@@ -38,5 +40,14 @@ function addComment($nom, $prenom, $email, $commentaire, $valid, $stars, $pdo)
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
+    
+    $body = "
+    <p>Bonjour $prenom, merci d'avoir déposé un commentaire sur <a href=\"http://portfolio.sc5huynh.universe.wf\">portfolio.sc5huynh</a></p>
+    <p> Vous avez déposé ce commentaire :</p>
+    <i>\" $commentaire \" </i> 
+    <p>Votre commentaire sera affiché dés validation de la censure</p>";
+    
+    sendMail($email, $body);
+    
 }
 

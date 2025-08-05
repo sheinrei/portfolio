@@ -1,8 +1,13 @@
 <?php
 
-$dsn = 'mysql:host=localhost;dbname=portfolio';
-$user = 'root';
-$pass = '';
+
+
+$conf = require __DIR__ . "/config.php";
+
+
+$dsn = $conf['dsn'];
+$user = $conf['user'];
+$pass = $conf['password'];
 $pdo = new \PDO($dsn, $user, $pass);
 
 function getComment($pdo)
@@ -18,4 +23,8 @@ function getComment($pdo)
 
 $comment = getComment($pdo);
 
-echo json_encode($comment);
+
+header('Content-Type: application/json; charset=UTF-8');
+echo json_encode($comment, JSON_UNESCAPED_UNICODE| JSON_INVALID_UTF8_SUBSTITUTE);
+
+
