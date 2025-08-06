@@ -116,11 +116,78 @@ $(function () {
     // fin des event pour deplkacer la modale
 
 
-    //date et heure dans le header
+    //effet avec le scale on hover
+    $('.frame_projet_detail').on("mouseenter", function () {
 
-    setInterval(() => {
-        const date = new Date();
-        const current_time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-        $(".right-header p").text(current_time);
-    }, 1000)
+        let scale = 1
+        const handler = setInterval(() => {
+
+            if (scale < 1.1) {
+                scale += 0.005
+                $(this).css("scale", scale);
+
+            } else {
+                scale = 1
+            }
+        }, 42)
+
+        $('.frame_projet_detail').on("mouseleave", function () {
+            clearInterval(handler);
+            $(this).css("scale", "1");
+
+        })
+    })
+
+
+    async function getProjectData(){
+        const reponse = await fetch("dataProjet.json");
+        const data = await reponse.json();
+        return data;
+    }
+
+
+    $('.frame_projet_detail').on("click", async function () {
+
+        const data = await getProjectData();
+        console.log(data)
+
+        let opacity = 1;
+
+        let handler = setInterval(() => {
+            opacity -= 0.1;
+            $(".content").css("opacity", opacity);
+
+            if (opacity < -0.2) {
+                clearInterval(handler);
+                $(".content").addClass("display-none");
+                $(".header").addClass("display-none");
+                $(".footer").addClass("display-none");
+                const div = `<div class="frame-detail-projet">
+                <a href="${data.stationMeteo.url}">${data.stationMeteo.titre}</a>
+                <p>Technologie utillisé : ${data.stationMeteo.technologie}</p>
+                <p>Présentation : ${data.stationMeteo.presentation}</p>
+                <img class="image-projet" src='img/meteoBackground2.png'>
+                </div>`
+
+                $(div).insertAfter(".header")
+
+            }
+
+        }, 41);
+
+
+
+    })
+
+    $("body").on("click", ".frame-detail-projet", function () {
+        $(".content").removeClass("display-none");
+        $(".header").removeClass("display-none");
+        $(".footer").removeClass("display-none");
+        $(".content").css("opacity", "1");
+        $(".frame-detail-projet").remove("div");
+    })
+
+
+
+
 })

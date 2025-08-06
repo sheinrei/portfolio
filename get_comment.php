@@ -21,8 +21,10 @@ function getComment($pdo)
     return $result;
 }
 
-$comment = getComment($pdo);
 
+$comment = getComment($pdo);
+//print_r($comment);
+//htmlspecialchars($comment['commentaire'], ENT_QUOTES, 'UTF-8');
 
 header('Content-Type: application/json; charset=UTF-8');
 echo json_encode($comment, JSON_UNESCAPED_UNICODE| JSON_INVALID_UTF8_SUBSTITUTE);

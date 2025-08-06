@@ -9,6 +9,8 @@
     top: 0px;    
     background-color: var(--soft-bg);
     z-index: 5;
+
+    min-width: 100%;
 }
 
 .left-header{

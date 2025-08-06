@@ -1,0 +1,25 @@
+{
+    "stationMeteo": {
+        "titre": "Station meteo",
+        "url": "sheinrei.github.io/station-meteo",
+        "presentation": "Une station meteo simple et efficace, mise en place d'effet pour un bon UX, sauvegarde des préferences dans le localStorage et geolocalisation de la ville de l'utilisateur",
+        "technologie": "HTML/CSS/JavaScript",
+        "background" : "/img/meteoBackground"
+    },
+
+    "swm": {
+        "titre": "Summoners War Management",
+        "url": "En cours de prepa",
+        "presentation": "Connaissez-vous SummonersWar Sky Arena? C'est un jeu mobile où on joue avce des créatures invoqués, équipé de rune et d'artefact elles deviennent plus puissant! C'est là qu'est le coeur de cette Application. SUmmoners War Management est une appli qui va gerer les équipements et offrir à l'utilisateur un management complet de son compte.",
+        "technologie": "HTML/CSS/JavaScript/Symfony/Php/MySql",
+        "background" : "/img/swnBackground"
+    },
+
+        "DiscoShein": {
+        "titre": "DiscoShein",
+        "url": "discoshein/beaute-laurent.fr",
+        "presentation": "DiscoShein est une application de recensement de musique. Le but de l'application étant la gestion du CRUD pour les musiques plus la gestion de l'utilisateur avec login gestion de redirection en conséquence.",
+        "technologie": "HTML/CSS/Php/MySql",
+        "background" : "/img/discoSheinBackground"
+    }
+}
