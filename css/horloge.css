@@ -6,10 +6,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-
     background-color: beige;
 
+    margin-right:10px
 }
 
 /* aiguille seconde */
@@ -99,14 +98,3 @@
 
 
 
-.new_needle {
-    position: absolute;
-    top: 200px;
-    right: 300px;
-    height: 100px;
-    width: 6px;
-    border-radius: 100%;
-    background: rgb(237, 235, 235);
-    border: 4px solid black;
-
-}

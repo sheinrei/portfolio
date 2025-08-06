@@ -1,14 +1,18 @@
 :root {
   --text-color: #dbdbdb;
-  --main-bg: #202020;
   --soft-bg: #646464;
   --color-content: #8D8D8D;
   --color-border: #BBBBBB;
   --color-gold: rgb(255, 228, 73);
+
+  --main-bg: linear-gradient(135deg,
+      rgb(43,43,43) 0%,
+      #202020 50%,
+      rgb(43, 43, 43) 100%);
 }
 
-.display-none{
-  display:none !important; 
+.display-none {
+  display: none !important;
 }
 
 html,
@@ -24,7 +28,7 @@ body {
   font-family: "Unal Ancizar", sans-serif;
 
   min-height: 100vh;
-
+  background: var(--main-bg);
 }
 
 

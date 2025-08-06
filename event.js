@@ -117,7 +117,7 @@ $(function () {
 
 
     //effet avec le scale on hover
-    $('.frame_projet_detail').on("mouseenter", function () {
+    $('.frame_projet_content').on("mouseenter", function () {
 
         let scale = 1
         const handler = setInterval(() => {
@@ -131,7 +131,7 @@ $(function () {
             }
         }, 42)
 
-        $('.frame_projet_detail').on("mouseleave", function () {
+        $('.frame_projet_content').on("mouseleave", function () {
             clearInterval(handler);
             $(this).css("scale", "1");
 
@@ -146,7 +146,7 @@ $(function () {
     }
 
 
-    $('.frame_projet_detail').on("click", async function () {
+    $('.frame_projet_content').on("click", async function () {
 
         const data = await getProjectData();
 

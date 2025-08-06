@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>Document</title>
 
     <link rel="stylesheet" href="css/head&foot.css">
@@ -172,10 +172,10 @@
 
 
         <div class="section-2" id="section-2">
-            <h2>Mes Projets</h2>
+            <h2 class="title-projet">MES PROJETS</h2>
 
             <div class="frame-projet">
-                <div class="frame_projet_detail" id="projet-1">
+                <div class="frame_projet_content" id="projet-1">
                     <div>
                         <a href="https://sheinrei.github.io/station-meteo/" target="_blank">Station Meteo v1</a>
                         <p>Application de station meteo, appel API </p>
@@ -184,7 +184,7 @@
 
                 </div>
 
-                <div class="frame_projet_detail" id="projet-2">
+                <div class="frame_projet_content" id="projet-2">
                     <div>
                         <a href="discoshein.beaute-laurent.fr" target="_blank">DiscoShein</a>
                         <p>Application de recensement de musique </p>
@@ -193,7 +193,7 @@
 
                 </div>
 
-                <div class="frame_projet_detail" id="projet-3">
+                <div class="frame_projet_content" id="projet-3">
                     <div>
                         <a href="discoshein.beaute-laurent.fr" target="_blank">SummonerWarManagement</a>
                         <p>Application pour jeu mobile</p>
@@ -209,28 +209,28 @@
 
         <div class="section-3" id="section-3">
             <div class="add_comment">
-                <h2>Commentaire</h2>
-                <form action="traitement_comment.php" method="post">
+                <form action="traitement_comment.php" class="formulaire-commentaire" method="post">
                     <fieldset>
                         <legend>Laisser un <span style="color:var(--color-gold)">commentaire</span></legend>
 
 
-                        <label for="nom">Nom</label>
-                        <input type="text" name="nom" id="nom" required>
+                        <div>
+                            <label for="nom">Nom</label>
+                            <input type="text" name="nom" id="nom" required>
+                            <br>
+                            <label for="prenom">Prenom</label>
+                            <input type="text" name="prenom" id="prenom" required>
+                            <br>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
 
-                        <label for="prenom">Prenom</label>
-                        <input type="text" name="prenom" id="prenom" required>
-
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required>
-                        <br><br>
 
 
 
 
 
                         <div class="rating">
-
                             <input type="radio" id="star5" name="rating" value="5" />
                             <label for="star5" title="5 étoiles">★</label>
 
