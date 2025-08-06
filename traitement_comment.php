@@ -51,8 +51,8 @@ function addComment($nom, $prenom, $email, $commentaire, $valid, $stars, $pdo)
     sendMail($email, $body);
     
     //enregistre l'envoi de mail dans les logs
-    $date = date("Y-m-j");
-    $log = "Envois d'email pour dépot de commentaire le $date - Envoyé à $nom $prenom à l'adresse $email - le commentaire : $commentaire \n";
-    file_put_contents("logEmail.txt", $log, FILE_APPEND);
+    $date = date("Y-m-d H:i:s");
+    $log = "Envoi d'email pour dépôt de commentaire le $date - Envoyé à $nom $prenom à l'adresse $email - Commentaire : $commentaire \n";
+    file_put_contents("logEmail.txt", mb_convert_encoding($log, "utf-8"), FILE_APPEND);
 }
 

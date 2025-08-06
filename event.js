@@ -139,7 +139,7 @@ $(function () {
     })
 
 
-    async function getProjectData(){
+    async function getProjectData() {
         const reponse = await fetch("dataProjet.json");
         const data = await reponse.json();
         return data;
@@ -149,42 +149,77 @@ $(function () {
     $('.frame_projet_detail').on("click", async function () {
 
         const data = await getProjectData();
-        console.log(data)
 
         let opacity = 1;
 
         let handler = setInterval(() => {
             opacity -= 0.1;
             $(".content").css("opacity", opacity);
+            $(".header").css("opacity", opacity);
+            $(".footer").css("opacity", opacity);
 
             if (opacity < -0.2) {
                 clearInterval(handler);
                 $(".content").addClass("display-none");
                 $(".header").addClass("display-none");
                 $(".footer").addClass("display-none");
+
+
+                const id = $(this).attr("id");
+                let texte;
+                if (id === "projet-1") {
+                    texte = data.stationMeteo;
+                } else if (id === "projet-2") {
+                    texte = data.discoShein
+                } else if (id === "projet-3") {
+                    texte = data.swm;
+                }
+
                 const div = `<div class="frame-detail-projet">
-                <a href="${data.stationMeteo.url}">${data.stationMeteo.titre}</a>
-                <p>Technologie utillisé : ${data.stationMeteo.technologie}</p>
-                <p>Présentation : ${data.stationMeteo.presentation}</p>
-                <img class="image-projet" src='img/meteoBackground2.png'>
+                <a class="title-projet" href="${texte.url}">${texte.titre}</a>
+                <p>Technologie utillisé : ${texte.technologie}</p>
+                <p class="presentation-projet">Présentation : ${texte.presentation}</p>
+                <img class="image-projet" src="${texte.background}" alt="-- En cours de construction --">
                 </div>`
 
                 $(div).insertAfter(".header")
 
             }
 
-        }, 41);
+        }, 42);
 
 
 
     })
 
+
+    //click pour sortir de la frame detail projet
     $("body").on("click", ".frame-detail-projet", function () {
-        $(".content").removeClass("display-none");
-        $(".header").removeClass("display-none");
-        $(".footer").removeClass("display-none");
-        $(".content").css("opacity", "1");
-        $(".frame-detail-projet").remove("div");
+
+
+        let opacity = 1;
+        let opacity_reverse = 0;
+
+        const handler = setInterval(() => {
+
+            $(".header").removeClass("display-none");
+            $(".footer").removeClass("display-none");
+            $(".content").removeClass("display-none");
+            
+            
+            $(this).css("opacity", opacity)
+            $(".header").css("opacity", opacity_reverse);
+            $(".footer").css("opacity", opacity_reverse);
+            opacity -= 0.1;
+            opacity_reverse += 0.1;
+            
+            if (opacity < 0) {
+                clearInterval(handler);
+                $(".content").css("opacity", "1");
+                $(".frame-detail-projet").remove("div");
+            }
+        }, 42)
+
     })
 
 

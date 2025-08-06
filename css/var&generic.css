@@ -8,7 +8,7 @@
 }
 
 .display-none{
-  display:none !important;
+  display:none !important; 
 }
 
 html,
@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--text-color);
-  background-color: var(--color-content);
+  background-color: var(--main-bg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

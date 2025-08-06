@@ -12,7 +12,6 @@ function getComment() {
                 if (notation !== 0) {
                     for (j = 0; j < notation; j++) {
                         stars += "★"
-                        console.log("boucle", stars)
                     }
                 }else{stars = "0★"}
 
