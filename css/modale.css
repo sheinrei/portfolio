@@ -40,10 +40,6 @@
 
 /* project */
 
-.modale_project{
-    width: 100px;
-    cursor: pointer;
-}
 .big_modale_project {
     position: fixed;
     top: 50%;

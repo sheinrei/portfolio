@@ -1,19 +1,4 @@
-function getbackground(element){
-    const background = {
-        "station-meteov1" : "background-image: url(img/meteo1.png);",
-        "statio-meteov2" : "...",
-        "discoShein" : "...",
-        "bestFlix" : "...",
-
-    }
-    
-    const result = background.element;
-    return result
-}
-
 $(function (){
-
-
 
     $(".modale_project").on("click", function(){
     $modale = $(this);

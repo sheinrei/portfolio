@@ -116,11 +116,113 @@ $(function () {
     // fin des event pour deplkacer la modale
 
 
-    //date et heure dans le header
+    //effet avec le scale on hover
+    $('.frame_projet_content').on("mouseenter", function () {
 
-    setInterval(() => {
-        const date = new Date();
-        const current_time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-        $(".right-header p").text(current_time);
-    }, 1000)
+        let scale = 1
+        const handler = setInterval(() => {
+
+            if (scale < 1.1) {
+                scale += 0.005
+                $(this).css("scale", scale);
+
+            } else {
+                scale = 1
+            }
+        }, 42)
+
+        $('.frame_projet_content').on("mouseleave", function () {
+            clearInterval(handler);
+            $(this).css("scale", "1");
+
+        })
+    })
+
+
+    async function getProjectData() {
+        const reponse = await fetch("dataProjet.json");
+        const data = await reponse.json();
+        return data;
+    }
+
+
+    $('.frame_projet_content').on("click", async function () {
+
+        const data = await getProjectData();
+
+        let opacity = 1;
+
+        let handler = setInterval(() => {
+            opacity -= 0.1;
+            $(".content").css("opacity", opacity);
+            $(".header").css("opacity", opacity);
+            $(".footer").css("opacity", opacity);
+
+            if (opacity < -0.2) {
+                clearInterval(handler);
+                $(".content").addClass("display-none");
+                $(".header").addClass("display-none");
+                $(".footer").addClass("display-none");
+
+
+                const id = $(this).attr("id");
+                let texte;
+                if (id === "projet-1") {
+                    texte = data.stationMeteo;
+                } else if (id === "projet-2") {
+                    texte = data.discoShein
+                } else if (id === "projet-3") {
+                    texte = data.swm;
+                }
+
+                const div = `<div class="frame-detail-projet">
+                <a class="title-projet" href="${texte.url}">${texte.titre}</a>
+                <p>Technologie utillisé : ${texte.technologie}</p>
+                <p class="presentation-projet">Présentation : ${texte.presentation}</p>
+                <img class="image-projet" src="${texte.background}" alt="-- En cours de construction --">
+                </div>`
+
+                $(div).insertAfter(".header")
+
+            }
+
+        }, 42);
+
+
+
+    })
+
+
+    //click pour sortir de la frame detail projet
+    $("body").on("click", ".frame-detail-projet", function () {
+
+
+        let opacity = 1;
+        let opacity_reverse = 0;
+
+        const handler = setInterval(() => {
+
+            $(".header").removeClass("display-none");
+            $(".footer").removeClass("display-none");
+            $(".content").removeClass("display-none");
+            
+            
+            $(this).css("opacity", opacity)
+            $(".header").css("opacity", opacity_reverse);
+            $(".footer").css("opacity", opacity_reverse);
+            opacity -= 0.1;
+            opacity_reverse += 0.1;
+            
+            if (opacity < 0) {
+                clearInterval(handler);
+                $(".content").css("opacity", "1");
+                $(".frame-detail-projet").remove("div");
+            }
+        }, 42)
+
+    })
+
+
+
+
 })

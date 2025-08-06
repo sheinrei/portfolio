@@ -1,15 +1,18 @@
 .content {
-    background-color: var(--main-bg);
-    min-height: 100vh;
+   /*  background-color: var(--main-bg); */
+    background: var(--main-bg);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .section-1 {
     display: flex;
-    margin-top: 50px;
     margin-left: 20%;
+    padding-top: 150px;
+    padding-bottom: 90px;
+    gap: 65px;
 }
 
 .section-1a {
@@ -28,10 +31,11 @@
 
 }
 
-.logo{
-    width: 40px;height: 30px;
-    transform: translateY(25%);    
-    padding-right:7px;
+.logo {
+    width: 40px;
+    height: 30px;
+    transform: translateY(25%);
+    padding-right: 7px;
 }
 
 /* Fsection-1a */
@@ -58,17 +62,17 @@
 
 
 
-/* Fsection-1b */
+/* section-1b */
 
-.presentation_text{
-    border-top:1px solid var(--color-border);
+.presentation_text {
+    border-top: 1px solid var(--color-border);
     padding-bottom: 20px;
     text-indent: 1.5em;
 }
 
-.tools h2{
-    padding-bottom:10px;
-    border-bottom:1px solid var(--color-border);
+.tools h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
 
 }
 
@@ -93,52 +97,50 @@
     display: flex;
 }
 
-.element-tool:hover{
-    background-color:var(--color-border);
+.element-tool:hover {
+    background-color: var(--color-border);
     scale: 1.1;
 }
 
 
-/* Frame projets */
+/* Frame projets frame principal le détail est dans project.css*/
 .section-2 {
     margin-top: 40px;
     padding: 20px 50px;
-    margin-left:10%;
-    margin-right:10%;
+    width: fit-content;
+
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+
 }
 
-.frame_projet_detail{
-    background-color: var(--color-content);
-    border-radius:8px;
-    padding:4px 10px;
-    display:flex;
-    justify-content: space-between;
-}
 
-.modale_project{
-    background-color:red;
-    width: 50%;height: 90%;
-}
 
 /* frame commentaires */
 
-.section-3{
-    display:flex;
+.section-3 {
+    display: flex;
     align-items: center;
-    margin-left: 5%;
-    gap:40px;
-    margin-top:50px;
-    margin-bottom:20px;
+    gap: 40px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+
+}
+
+fieldset{
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 
-.display_comment{
-
-    border:1.5px solid var(--color-border);
+.display_comment {
+    min-width: 50%;
     height: fit-content;
-    padding:20px 30px;
-    background-color: var(--color-content);
-    border-radius:12px
-}
 
+    border: 1.5px solid var(--color-border);
+    background-color: var(--color-content);
+    border-radius: 12px;
+
+    padding:15px 40px;
+}
 
