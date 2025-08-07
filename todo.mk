@@ -48,11 +48,13 @@ Ce que je prévois de faire aujourd'hui :
 
 ->Rajouter les meta dans le head html #FAIT
 
-->Optimiser les chargements d'images.
+->Optimiser les chargements d'images.# Fait image compressé
 
-->Quelques modif sur les textes.
+->Quelques modif sur les textes.#Fait
 
--->Mettre liens vers mes projets plus en évidence.
+->Mettre liens vers mes projets plus en évidence.#Fait
+
+-> UTF-8 dans les commentaires?
 
 -> Mettre en ligne DiscoShein dans un sous-domaine.
 

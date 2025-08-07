@@ -1,7 +1,7 @@
 {
     "stationMeteo": {
         "titre": "Station Météo",
-        "url": "sheinrei.github.io/station-meteo",
+        "url": "sheinrei.github.io/formation-meteo",
         "presentation": "Une station meteo simple et efficace.<br> Mise en place d'effet pour un bon UX, sauvegarde des préferences dans le localStorage et geolocalisation de la ville de l'utilisateur.",
         "technologie": "HTML/CSS/JavaScript",
         "background": "img/meteoBackground.png"

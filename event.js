@@ -179,7 +179,8 @@ $(function () {
                 <a class="title-projet" href="${texte.url}">${texte.titre}</a>
                 <p>Technologie utillisé : ${texte.technologie}</p>
                 <p class="presentation-projet">Présentation : ${texte.presentation}</p>
-                <img class="image-projet" src="${texte.background}" alt="-- En cours de construction --">
+                <p>Image représentative pour découvrir le site <a href="${texte.url}" target="_blank"> cliquez ici <a/>
+                <img loading="lazy" class="image-projet" src="${texte.background}" alt="-- En cours de construction --">
                 </div>`
 
                 $(div).insertAfter(".header")
