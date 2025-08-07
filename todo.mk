@@ -54,7 +54,7 @@ Ce que je prévois de faire aujourd'hui :
 
 ->Mettre liens vers mes projets plus en évidence.#Fait
 
--> UTF-8 dans les commentaires?
+-> UTF-8 dans les commentaires?# fait ajouté dans le dsn charset-utf8 changé en directement dans config de prod
 
 -> Mettre en ligne DiscoShein dans un sous-domaine.
 
