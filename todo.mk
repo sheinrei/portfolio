@@ -28,3 +28,32 @@ et se renseigner sur les webhook avec git et en general un wbehook?
 client ssh pour se connecter sans acceder a cpanel putty, cmder, winscp, mobx
 
 livre sur les regex jeafrey fridl   z-lib.id 6> rejoindre le groupe ptb sur discord ping bot avce le liens
+
+---
+
+ajouter discoshein et enclancher la bdd;
+
+Mettre les meta dans l'index !!!
+ Modifier texte presentation voir sms laurent
+ ajouter dans frame-projet-detail un lien explite pour aller sur le site.
+ voir l'encodage utf-8 vdd/JS/php
+
+
+js leazy loding pour les images de projets
+
+
+----
+Jeudi 07/08
+Ce que je prévois de faire aujourd'hui : 
+
+->Rajouter les meta dans le head html #FAIT
+
+->Optimiser les chargements d'images.
+
+->Quelques modif sur les textes.
+
+-->Mettre liens vers mes projets plus en évidence.
+
+-> Mettre en ligne DiscoShein dans un sous-domaine.
+
+->Regarder les webhook.
