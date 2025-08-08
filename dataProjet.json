@@ -8,7 +8,7 @@
     },
     "discoShein": {
         "titre": "DiscoShein",
-        "url": "discoshein/beaute-laurent.fr",
+        "url": "discoshein.beaute-laurent.fr",
         "presentation": "DiscoShein est une application de discographie. <br> Le but de l'application étant la gestion du CRUD pour les musiques avec la gestion de l'utilisateur création de compte, login gestion de redirection en conséquence et coin admin pour gérer la base de donnée.",
         "technologie": "HTML/CSS/Php/MySql",
         "background": "img/discoSheinbg.png"
