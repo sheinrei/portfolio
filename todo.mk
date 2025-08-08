@@ -56,6 +56,6 @@ Ce que je prévois de faire aujourd'hui :
 
 -> UTF-8 dans les commentaires?# fait ajouté dans le dsn charset-utf8 changé en directement dans config de prod
 
--> Mettre en ligne DiscoShein dans un sous-domaine.
+-> Mettre en ligne DiscoShein dans un sous-domaine.# Fait need fix bug!
 
 ->Regarder les webhook.
