@@ -57,3 +57,6 @@ Vous avez eu $count_new commentaires : </p> \n";
 
 
 sendMail("l.beaute@laposte.net", $body_mail);
+
+
+
