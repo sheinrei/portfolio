@@ -1,6 +1,6 @@
 function getComment() {
 
-    fetch("get_comment.php")
+    fetch("/get_comment.php")
         .then(r => r.json())
         .then(data => {
 
