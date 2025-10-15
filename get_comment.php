@@ -4,7 +4,6 @@
 
 $conf = require __DIR__ . "/config.php";
 
-
 $dsn = $conf['dsn'];
 $user = $conf['user'];
 $pass = $conf['password'];
@@ -27,4 +26,3 @@ $comment = getComment($pdo);
 
 header('Content-Type: application/json; charset=UTF-8');
 echo json_encode($comment, JSON_UNESCAPED_UNICODE);
-

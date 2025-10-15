@@ -1,10 +1,24 @@
 {
-    "stationMeteo": {
-        "titre": "Station Météo",
+    "stationMeteov3": {
+        "titre": "Station Météo V3",
+        "url": "http://meteov3.beaute-laurent.fr",
+        "presentation": "Une station meteo faite avec React.<br>Découverte de React,<br>Mise en place de composant réutilsable, custom hook.",
+        "technologie": "HTML/CSS/JavaScript",
+        "background": "img/meteoV3.png"
+    },
+    "stationMeteov2": {
+        "titre": "Station Météo V2",
         "url": "http://sheinrei.github.io/formation-meteo",
         "presentation": "Une station meteo simple et efficace.<br> Mise en place d'effet pour un bon UX, sauvegarde des préferences dans le localStorage et geolocalisation de la ville de l'utilisateur.",
         "technologie": "HTML/CSS/JavaScript",
         "background": "img/meteoBackground.png"
+    },
+    "stationMeteov1": {
+        "titre": "Station Météo V1",
+        "url": "http://sheinrei.github.io/station-meteo",
+        "presentation": "Ma premiere application, une traditionnelle station méteo.<br> Découverte de javascript et des API, j'ai conservé cette application comme relique du passé :).",
+        "technologie": "HTML/CSS/JavaScript",
+        "background": "img/meteoV1.png"
     },
     "discoShein": {
         "titre": "DiscoShein",
@@ -19,5 +33,12 @@
         "presentation": "Connaissez-vous SummonersWar Sky Arena? C'est un jeu mobile où l'on joue avec des créatures invoquées. <br>Equipé de rune et d'artefact ils deviennent plus puissant! C'est là qu'est le coeur de cette Application.<br> Summoners War Management est une appli qui va gerer les équipements et offrir à l'utilisateur un management complet de son compte à partir d'un fichier json contenant les données de son compte.",
         "technologie": "HTML/CSS/JavaScript/Symfony/Php/MySql/Docker",
         "background": "img/swnBackground.png"
+    },
+    "calendyx": {
+        "titre": "Calendyx - Organise ton temps, libère ton esprit",
+        "url": "#",
+        "presentation": "Calendyx est une application de gestion de rdv et d'emplois du temps.<br>Avec Calendyx vous pouvez faire une demande de validation de rdv avec un envois d'email et sms.<br> Gérer votre emplois du temps avec une synchronisation de vos agenda google, apple ou bien outlook. Actuellement en cours de construction premiere version mise en production bientôt.",
+        "technologie": "NodeJs/Express/Sequelize",
+        "background": "img/Calendyx.png"
     }
 }

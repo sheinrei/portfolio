@@ -146,6 +146,8 @@ $(function () {
     }
 
 
+
+    //click pour ouvrir une frame projet
     $('.frame_projet_content').on("click", async function () {
 
         const data = await getProjectData();
@@ -166,19 +168,14 @@ $(function () {
 
 
                 const id = $(this).attr("id");
-                let texte;
-                if (id === "projet-1") {
-                    texte = data.stationMeteo;
-                } else if (id === "projet-2") {
-                    texte = data.discoShein
-                } else if (id === "projet-3") {
-                    texte = data.swm;
-                }
+
+                const texte = data[`${id}`];
+
 
                 const div = `<div class="frame-detail-projet">
                 <a class="title-projet" href="${texte.url}">${texte.titre}</a>
                 <p>Technologie utillisé : ${texte.technologie}</p>
-                <p class="presentation-projet">Présentation : ${texte.presentation}</p>
+                <p class="presentation-projet"><strong>Présentation :</strong><br> ${texte.presentation}</p>
                 <p>Image représentative pour découvrir le site <a href="${texte.url}" target="_blank"> cliquez ici <a/>
                 <img loading="lazy" class="image-projet" src="${texte.background}" alt="-- En cours de construction --">
                 </div>`
@@ -206,14 +203,14 @@ $(function () {
             $(".header").removeClass("display-none");
             $(".footer").removeClass("display-none");
             $(".content").removeClass("display-none");
-            
-            
+
+
             $(this).css("opacity", opacity)
             $(".header").css("opacity", opacity_reverse);
             $(".footer").css("opacity", opacity_reverse);
             opacity -= 0.1;
             opacity_reverse += 0.1;
-            
+
             if (opacity < 0) {
                 clearInterval(handler);
                 $(".content").css("opacity", "1");
