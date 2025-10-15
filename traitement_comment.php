@@ -1,6 +1,6 @@
 <?php
 
-$config = require __DIR__ . '/config.php';
+$config = require __DIR__ . '/../config.php';
 
 require ("mailer.php");
 

@@ -2,7 +2,7 @@
 
 
 require("mailer.php");
-$conf = require __DIR__ . "/config.php";
+$conf = require __DIR__ . "/../config.php";
 
 
 $dsn = $conf['dsn'];
