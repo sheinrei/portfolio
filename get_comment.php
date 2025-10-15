@@ -4,10 +4,14 @@
 
 $conf = require __DIR__ . "/config.php";
 
-$dsn = $conf['dsn'];
-$user = $conf['user'];
-$pass = $conf['password'];
-$pdo = new \PDO($dsn, $user, $pass);
+try {
+    $dsn = $conf['dsn'];
+    $user = $conf['user'];
+    $pass = $conf['password'];
+    $pdo = new \PDO($dsn, $user, $pass);
+} catch (PDOException $e) {
+    die('Erreur de la connexion' . $e->getMessage());
+}
 
 function getComment($pdo)
 {
