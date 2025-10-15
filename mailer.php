@@ -9,7 +9,7 @@ require 'vendor/autoload.php';
 
 function sendMail($sender, $body)
 {
-    $config = require 'config.php';
+    $config = require '/../config.php';
     $mail = new PHPMailer(true);
     $mail_password = $config['mailPassword'];
     try {
