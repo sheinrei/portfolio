@@ -2,7 +2,7 @@
 
 
 
-$conf = require __DIR__ . "/config.php";
+$conf = require __DIR__ . "/../config.php";
 
 try {
     $dsn = $conf['dsn'];
