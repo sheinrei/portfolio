@@ -31,7 +31,8 @@
     background-color: var(--color-content);
 
     width: fit-content;
-    border: 1px solid var(--color-gold);
+    max-width:300px;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 20px;
 
@@ -43,7 +44,7 @@
 .comment-date {
     width: fit-content;
     padding-bottom: 8px;
-    border-bottom: 1px solid var(--color-gold);
+    border-bottom: 1px solid var(--color-border);
 
     font-weight: 700;
 }

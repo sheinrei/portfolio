@@ -36,11 +36,11 @@
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
     <!--mes scripts-->
-    <script src="createModale.js" defer></script>
-    <script src="display_comment.js" defer></script>
-    <script src="event.js" defer></script>
-    <script src="modaleProject.js" defer></script>
-    <script src="horloge.js" defer></script>
+    <script src="js/createModale.js" defer></script>
+    <script src="js/display_comment.js" defer></script>
+    <script src="js/event.js" defer></script>
+    <script src="js/modaleProject.js" defer></script>
+    <script src="js/horloge.js" defer></script>
 
 
 
@@ -234,13 +234,13 @@
 
 
         <div class="section-2" id="section-2">
-            <h2 class="title-projet">MES PROJETS</h2>
+            <h2 class="title-projet">MES <span style="color:var(--color-gold)">PROJETS</span></h2>
 
             <div class="frame-projet">
 
                 <div class="project-row">
                     <!--Calendyx-->
-                    <div class="cards-project">
+                    <div class="cards-project fade-in">
                         <header>
                             <p class="title-project">Calendyx - Organise ton temps, libère ton esprit</p>
                             <a href="https://calendyx.beaute-laurent.fr">Calendyx</a>
@@ -249,33 +249,35 @@
                         <img class="img-project" src="img/Calendyx.png" alt="image de calendyx">
 
                         <div>
-                            <p><span class="presentation-title">Présentation:</span> <br>
-                                Calendyx est une application de gestion de rdv et d'emplois du
-                                temps.<br>
-                                Grace à sa synchronisation des calendars google/apple et outlook retrouvez tout vos
-                                événements et
-                                gérez les en quelques clics.<br>
-                                Les fonctionalités :<br>
-                                -Déclancher un rendez-vous et envoyer un notification par email et sms à vos
-                                clients.<br>
-                                -Matching de rendez-vous, saisissez la période dans laquelle vous souhaitez votre
-                                rendez-vous et Smart Calendyx
-                                envois des nofitications aux participants et selon les diponibilités de chacun Calendyx
-                                determinera les meilleurs
-                                créneaux d'horraires.
+                            <p>
+                            <p class="presentation-title">Présentation:</p>
+                            Calendyx est une application de gestion de rdv et d'emplois du
+                            temps.<br>
+                            Grace à sa synchronisation des calendars google/apple et outlook retrouvez tout vos
+                            événements et
+                            gérez les en quelques clics.<br>
+                            Les fonctionalités :<br>
+                            -Déclancher un rendez-vous et envoyer un notification par email et sms à vos
+                            clients.<br>
+                            -Matching de rendez-vous, saisissez la période dans laquelle vous souhaitez votre
+                            rendez-vous et Smart Calendyx
+                            envois des nofitications aux participants et selon les diponibilités de chacun Calendyx
+                            determinera les meilleurs
+                            créneaux d'horraires.
 
                             </p>
 
 
                         </div>
                         <footer>
-                            <p>Technologie: NodeJs/JavaScript/Express/Sequelize</p>
+                            <p><span style="font-weight: 800">Technologie</span>: NodeJs /JavaScript /Express /Sequelize
+                            </p>
                         </footer>
                     </div>
 
 
                     <!--Meteov3-->
-                    <div class="cards-project">
+                    <div class="cards-project fade-in">
 
                         <header>
                             <p class="title-project">Station Météo - Version 3 </p>
@@ -285,15 +287,16 @@
                         <img class="img-project" src="img/meteoV3.png" alt="image d'une station meteo">
 
                         <div>
-                            <p><span class="presentation-title">Présentation:</span> <br>
-                                Une station meteo faite avec React.
-                                <br>Découverte de React, mise en place de composant
-                                réutilsable, custom hook.<br>
-                                
+                            <p>
+                            <p class="presentation-title">Présentation:</p>
+                            Une station meteo faite avec React.
+                            <br>Découverte de React, mise en place de composant
+                            réutilsable, custom hook.<br>
+                            Animation fluide et dynamique pour un bon UI/UX
                         </div>
 
                         <footer>
-                            <p>technologie: HTML/CSS/JavaScript/React
+                            <p><span style="font-weight: 800">Technologie</span>: HTML /CSS /JavaScript /React
                         </footer>
                     </div>
                 </div>
@@ -373,7 +376,7 @@
         </div>
 
         <div class="display-comment">
-            <span class="frame-comment-display-title">Ces personnes ont déjà laissé un commentaire !</span>
+            <span class="frame-comment-display-title">Ces personnes ont déjà laissé un <span style="color:var(--color-gold)">commentaire !</span></span>
 
             <div class="frame-comment">
                 <div id="input_comment">
