@@ -1,3 +1,33 @@
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+function controlInputComment(nom, prenom, email, commentaire) {
+    if (nom.length < 1) {
+        createClassiqueModale("Merci de renseignez notre nom", "Attention")
+        return false
+    }
+
+    if (prenom.length < 1) {
+        createClassiqueModale("Merci de renseignez notre prénom")
+        return false
+    }
+
+    const valideEmail = validateEmail(email)
+    if (!valideEmail) {
+        createClassiqueModale("Email invalide ! Merci de corriger votre saisie")
+        return false
+    }
+
+    if (commentaire.length < 1) {
+        createClassiqueModale("Vous essayez de déposer un commentaire mais avec un commentaire c'est encore mieux !")
+        return false
+    }
+
+    return true
+}
+
 $(function () {
 
     let stars_value;
@@ -19,12 +49,12 @@ $(function () {
         const prenom = $("#prenom").val();
         const email = $("#email").val();
         const commentaire = $("#commentaire").val();
+        console.log(commentaire.length)
 
 
+        const control = controlInputComment(nom, prenom, email, commentaire)
 
-        if (nom.length > 0 && prenom.length > 0 && email.length > 0 && commentaire.length > 0 && stars_value > 0) {
-
-
+        if (control) {
             fetch("traitement_comment.php", {
                 method: "POST",
                 headers: {
@@ -34,86 +64,25 @@ $(function () {
             })
                 .then(r => r.ok ? console.log("Commentaire envoyé") : alert("Erreur serveur"))
                 .then(() => {
+                    createClassiqueModale(`<div>
+                        <p style="margin-bottom:8px">Merci d'avoir déposé votre commentaire. </p>
+                        <p>
+                            Pour garantir un espace respectueux et agréable à tous, les commentaires inappropriés, 
+                            injurieux ou irrespectueux ne seront pas affichés.
+                        </p>
+                        </div>`)
 
-                    const modale = `
-                <div class="modale">
-                
-                <div class="top-modale">
-                <div class="top_modale_left">Message</div>
-                <div class="close_modale"> X </div>
-                </div>
-                
-                <div class="content_modale">
-                <p>Merci d'avoir déposé votre commentaire. <br>
-                Pour garantir un espace respectueux et agréable à tous, les commentaires inappropriés, 
-                injurieux ou irrespectueux ne seront pas affichés. Merci de rester courtois !
-                </p>
-                </div>
-                </div>
-                `;
-
-                    $("form").append(modale);
-
-                    $("#nom").val(" ");
-                    $("#prenom").val(" ");
-                    $("#email").val(" ");
-                    $("#commentaire").val(" ");
+                    $("#nom").val("");
+                    $("#prenom").val("");
+                    $("#email").val("");
+                    $("#commentaire").val("");
                 })
-
         }
+
     })
 
 
-    //Déplacer la boite modale
-    $(document).on("click", ".close_modale", function () {
-        $(".modale").remove()
-    })
 
-    const position = {
-        last_x: 0,
-        last_y: 0,
-        new_x: 0,
-        new_y: 0,
-    }
-    let activ_move = false;
-    let target = null;
-
-    $("body").on("mousedown", ".modale", function (e) {
-        const element = e.target;
-        activ_move = true;
-        target = element;
-        position.last_x = e.pageX;
-        position.last_y = e.pageY;
-    })
-
-
-    // part 2 mouse move
-    $("body").on("mousemove", function (e) {
-        if (activ_move && target) {
-            target = $(".modale");
-            const decal_x = e.pageX - position.last_x;
-            const decal_y = e.pageY - position.last_y;
-
-            // mise à jour position modale
-            const currentLeft = parseInt($(target).css("left")) || 0;
-            const currentTop = parseInt($(target).css("top")) || 0;
-
-
-            $(target).css({
-                "left": currentLeft + decal_x,
-                "top": currentTop + decal_y
-            });
-
-            position.last_x = e.pageX;
-            position.last_y = e.pageY;
-        }
-    })
-
-    $("body").on("mouseup", function () {
-        activ_move = false;
-        target = null;
-    });
-    // fin des event pour deplkacer la modale
 
 
     //effet avec le scale on hover

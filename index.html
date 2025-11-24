@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/horloge.css">
     <link rel="stylesheet" href="css/project.css">
     <link rel="stylesheet" href="css/responciv.css">
+    <link rel="stylesheet" href="css/comment.css">
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -28,15 +29,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Jura:wght@300..700&family=Lisu+Bosa:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Markazi+Text:wght@400..700&family=My+Soul&family=Oswald:wght@200..700&display=swap"
         rel="stylesheet">
+
+
     <!-- jquerry-->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
     <!--mes scripts-->
-    <script src="display_comment.js"></script>
-    <script src="event.js"></script>
-    <script src="modaleProject.js"></script>
-    <script src="horloge.js"></script>
+    <script src="createModale.js" defer></script>
+    <script src="display_comment.js" defer></script>
+    <script src="event.js" defer></script>
+    <script src="modaleProject.js" defer></script>
+    <script src="horloge.js" defer></script>
 
 
 
@@ -234,64 +238,76 @@
 
             <div class="frame-projet">
 
-                <div class="frame_projet_content" id="stationMeteov3">
-                    <div>
-                        <a href="https://sheinrei.github.io/formation-meteo/" target="_blank">Station Meteo v3</a>
-                        <p>Application de station meteo avec React</p>
-                        <p>Techno : React/JavaScript</p>
+                <div class="project-row">
+                    <!--Calendyx-->
+                    <div class="cards-project">
+                        <header>
+                            <p class="title-project">Calendyx - Organise ton temps, libère ton esprit</p>
+                            <a href="https://calendyx.beaute-laurent.fr">Calendyx</a>
+                        </header>
+
+                        <img class="img-project" src="img/Calendyx.png" alt="image de calendyx">
+
+                        <div>
+                            <p><span class="presentation-title">Présentation:</span> <br>
+                                Calendyx est une application de gestion de rdv et d'emplois du
+                                temps.<br>
+                                Grace à sa synchronisation des calendars google/apple et outlook retrouvez tout vos
+                                événements et
+                                gérez les en quelques clics.<br>
+                                Les fonctionalités :<br>
+                                -Déclancher un rendez-vous et envoyer un notification par email et sms à vos
+                                clients.<br>
+                                -Matching de rendez-vous, saisissez la période dans laquelle vous souhaitez votre
+                                rendez-vous et Smart Calendyx
+                                envois des nofitications aux participants et selon les diponibilités de chacun Calendyx
+                                determinera les meilleurs
+                                créneaux d'horraires.
+
+                            </p>
+
+
+                        </div>
+                        <footer>
+                            <p>Technologie: NodeJs/JavaScript/Express/Sequelize</p>
+                        </footer>
                     </div>
 
-                </div>
 
-                <div class="frame_projet_content" id="stationMeteov2">
-                    <div>
-                        <a href="https://sheinrei.github.io/formation-meteo/" target="_blank">Station Meteo v2</a>
-                        <p>Application de station meteo, appel API </p>
-                        <p>Techno : HTML/CSS/JavaScript</p>
+                    <!--Meteov3-->
+                    <div class="cards-project">
+
+                        <header>
+                            <p class="title-project">Station Météo - Version 3 </p>
+                            <a href="https://meteov3.beaute-laurent.fr">Station Meteo</a>
+                        </header>
+
+                        <img class="img-project" src="img/meteoV3.png" alt="image d'une station meteo">
+
+                        <div>
+                            <p><span class="presentation-title">Présentation:</span> <br>
+                                Une station meteo faite avec React.
+                                <br>Découverte de React, mise en place de composant
+                                réutilsable, custom hook.<br>
+                                
+                        </div>
+
+                        <footer>
+                            <p>technologie: HTML/CSS/JavaScript/React
+                        </footer>
                     </div>
-
                 </div>
 
-                <div class="frame_projet_content" id="stationMeteov1">
-                    <div>
-                        <a href="https://sheinrei.github.io/formation-meteo/" target="_blank">Station Meteo v1</a>
-                        <p>Application de station meteo, appel API </p>
-                        <p>Techno : HTML/CSS/JavaScript</p>
-                    </div>
 
-                </div>
-
-                <div class="frame_projet_content" id="discoShein">
-                    <div>
-                        <a href="https://discoshein.beaute-laurent.fr" target="_blank">DiscoShein</a>
-                        <p>Application de recensement de musique </p>
-                        <p>Techno : Php/Mysql</p>
-                    </div>
-
-                </div>
-
-                <div class="frame_projet_content" id="swm">
-                    <div>
-                        <a href="#" target="_blank">SummonerWarManagement</a>
-                        <p>Application pour jeu mobile</p>
-                        <p>Techno : JavaScript/Php/Symfony/Mysql/Docker</p>
-                    </div>
-
-                </div>
-
-                <div class="frame_projet_content" id="calendyx">
-                    <div>
-                        <a href="#" target="_blank">Calendyx</a>
-                        <p>Application Gestion prise de rdv et emplois du temps.</p>
-                        <p>Techno : NodeJs/Express/Sequelize</p>
-                    </div>
-
-                </div>
             </div>
 
 
         </div>
         <!-- fin du content-->
+
+
+
+
 
 
         <div class="section-3" id="section-3">
@@ -301,15 +317,21 @@
                         <legend>Laisser un <span style="color:var(--color-gold)">commentaire</span></legend>
 
 
-                        <div>
-                            <label for="nom">Nom</label>
-                            <input type="text" name="nom" id="nom" required>
-                            <br>
-                            <label for="prenom">Prenom</label>
-                            <input type="text" name="prenom" id="prenom" required>
-                            <br>
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required>
+                        <div class="frame-comment-input">
+                            <div class="input-row">
+                                <label for="nom" class="label-comment">Nom</label>
+                                <input class="input-comment" type="text" name="nom" id="nom" required>
+                            </div>
+
+                            <div class="input-row">
+                                <label for="prenom" class="label-comment">Prenom</label>
+                                <input class="input-comment" type="text" name="prenom" id="prenom" required>
+                            </div>
+
+                            <div class="input-row">
+                                <label for="email" class="label-comment">Email</label>
+                                <input class="input-comment" type="email" name="email" id="email" required>
+                            </div>
                         </div>
 
 
@@ -320,6 +342,7 @@
                         <div class="rating">
                             <input type="radio" id="star5" name="rating" value="5" />
                             <label for="star5" title="5 étoiles">★</label>
+
 
                             <input type="radio" id="star4" name="rating" value="4" />
                             <label for="star4" title="4 étoiles">★</label>
@@ -335,32 +358,31 @@
                         </div>
 
 
-
-
-
-                        <br>
-                        <label for="commentaire">Commentaire : </label><br>
+                        <label for="commentaire">Commentaire : </label>
                         <textarea type="text-aria" name="commentaire" rows="5" cols="35" style="resize: none"
-                            id="commentaire" required></textarea>
-                        <br>
-                        <input type="submit">
+                            id="commentaire" placeholder="Votre commentaire"></textarea>
+
+                        <input class="btn-comment-submit" type="submit">
 
                     </fieldset>
                 </form>
             </div>
 
-            <div class="display_comment">
+
+
+        </div>
+
+        <div class="display-comment">
+            <span class="frame-comment-display-title">Ces personnes ont déjà laissé un commentaire !</span>
+
+            <div class="frame-comment">
                 <div id="input_comment">
-                    <span style="padding-bottom:10px">Commentaires :</span>
                 </div>
             </div>
         </div>
 
     </div>
 
-
-
-    </div>
 
     <div class="footer">
         <p>Copyright © 2025 - Laurent BEAUTE</p>

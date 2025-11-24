@@ -1,10 +1,10 @@
 function getComment() {
-
     fetch("get_comment.php")
         .then(r => r.json())
         .then(data => {
+            for (let i = 0; i < 2; i++) {
+                if(!data[i])return 
 
-            for (i = 0; i < data.length; i++) {
                 const notation = data[i].notation;
                 let stars = "";
 
@@ -13,25 +13,24 @@ function getComment() {
                     for (j = 0; j < notation; j++) {
                         stars += "★"
                     }
-                }else{stars = "0★"}
+                } else { stars = "0★" }
 
-                
 
 
                 const html = `
-                <div style="border-top:1px solid var(--color-gold); padding-bottom:8px;margin-top:8px;padding-top:8px">
+                <div class="cards-comment">
           
-                Le ${data[i].date} ${data[i].prenom} a écrit : <br>
-                ${stars}
-                <br>
-                "${data[i].commentaire}"
+                <span class="comment-date">Le ${data[i].date} ${data[i].prenom} a écrit : </span>
+                <span class="comment-stars">${stars}</span>
+                <span class="comment-text">"${data[i].commentaire}"</span>
                 </div>`
 
                 $('#input_comment').append(html);
             }
 
         })
+
 }
 
-
-getComment()
+let i = 0
+getComment(i)

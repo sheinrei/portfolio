@@ -1,0 +1,49 @@
+.display-comment {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    min-height:220px;
+    border: 1.5px solid var(--color-border);
+    border-radius: 12px;
+
+    padding: 15px 40px;
+}
+
+.frame-comment-display-title {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 15px 0;
+}
+
+#input_comment {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
+.frame-comment{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-comment {
+    background-color: var(--color-content);
+
+    width: fit-content;
+    border: 1px solid var(--color-gold);
+    border-radius: 8px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.comment-date {
+    width: fit-content;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-gold);
+
+    font-weight: 700;
+}

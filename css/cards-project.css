@@ -1,0 +1,19 @@
+.cards-project{
+    width: 45%;
+    border:1px solid var(--color-border);
+    border-radius:20px;
+    padding:20px;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-project{
+    width: 100%;
+}
+
+
+.cards-project footer{
+    
+}

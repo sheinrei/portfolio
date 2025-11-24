@@ -54,7 +54,8 @@
 .photo {
     width: 170px;
     height: 200px;
-    margin-bottom: 15px;
+    margin:auto;
+    margin-bottom:20px;
     border-radius: 50%;
 }
 
@@ -128,19 +129,71 @@
 }
 
 fieldset{
-    padding-left: 50px;
-    padding-right: 50px;
+    padding:10px 35px;
+    font-size: 20px;
+    display:flex;
+    flex-direction: column;
+}
+
+.frame-comment-input{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    margin-top:15px
+}
+
+.input-row{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:10px ;
+    border-radius:12px;
+}
+
+.input-row:hover{
+    background-color: grey;
+}
+
+.input-row label{
+    font-weight: 500;
+    font-size: 18px;
+    display:flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.input-row input{
+    padding: 5px 10px;
+    border-radius : 5px
+}
+
+.label-comment{
+    width: 100px
+}
+
+.rating{
+    display:flex;
+    justify-content: center;
+    margin-bottom:10px
 }
 
 
-.display_comment {
-    min-width: 50%;
-    height: fit-content;
 
-    border: 1.5px solid var(--color-border);
-    background-color: var(--color-content);
-    border-radius: 12px;
+#commentaire{
+    margin:10px 5px;
+    font-size:16px;
+    font-family: "Inter", sans-serif;;
 
-    padding:15px 40px;
+}
+.btn-comment-submit{
+    border-radius:10px;
+    padding:6px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.btn-comment-submit:hover{
+    background-color: beige;
 }
 
